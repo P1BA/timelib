@@ -5,7 +5,7 @@ program:TagDesJahres
 */
 #include <stdio.h>
 #include <stdlib.h>
-
+//test
 int main()
 {
     int tage_pro_monat[12] = {31,28,31,30,31,30,31,31,30,31,30,31};
@@ -14,11 +14,11 @@ int main()
     int day=0;
     int ly=-1; //leap year flag
     int days=0; //ergebnis
-    printf("bitte geben sie das gewünschte jahr ein \n");
+    printf("bitte geben sie das jahr ein \n");
     scanf("%d",&y);
     printf("%d Jahr\n",y);
     //leap year check
-    if(y % 4== 0 && y % 100 != 0 || y % 400 == 0){
+    if((y % 4== 0 && y % 100 != 0) || y % 400 == 0){
         ly=1;
     }else{
         ly=0;
@@ -28,7 +28,7 @@ int main()
     {
         tage_pro_monat[2] = 29 ;
     }
-
+    printf("bitte geben sie den monat ein \n");
     do
     {
         scanf("%d",&month);
@@ -36,7 +36,7 @@ int main()
     while(12 < month || month<0);
 
     printf("%d Monat \n",month);
-
+    printf("bitte geben sie den tag ein \n");
     do
     {
         scanf("%d",&day);
