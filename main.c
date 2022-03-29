@@ -14,6 +14,7 @@ int main()
     int day=0;
     int ly=-1; //leap year flag
     int days=0; //ergebnis
+    printf("bitte geben sie das gewünschte jahr ein \n");
     scanf("%d",&y);
     printf("%d Jahr\n",y);
     //leap year check
