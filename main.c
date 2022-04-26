@@ -35,9 +35,9 @@ int day_of_the_year(int day, int month, int year)
 Die Funktion liest 3 Ganzzahlwerte (Integer) ein, für Tag, Monat und Jahr. Wenn das angegebene Datum
 ungültig ist, wird erneut eingelesen, solange bis ein gültiges Datum eingegeben wurde.
 */
-int input_date(int day,int month,int year)
+void input_date(int day,int month,int year)
 {
-    return 0;
+
 }
 
 
@@ -47,6 +47,7 @@ ist. Bei Jahreszahlen vor dem Jahr 1582 wird ein Fehler zurückgegeben.
 */
 int is_leapyear (int year )
 {
+    int leap=NULL;
     if (year<1582)
     {
         return -1;
@@ -56,28 +57,29 @@ int is_leapyear (int year )
     if (year % 400 == 0)
     {
         printf("%d is a leap year.\n", year);
-        return 1;
+        leap=1;
     }
     // not a leap year if divisible by 100
     // but not divisible by 400
     else if (year % 100 == 0)
     {
         printf("%d is not a leap year.\n", year);
-        return 0;
+        leap=0;
     }
     // leap year if not divisible by 100
     // but divisible by 4
     else if (year % 4 == 0)
     {
         printf("%d is a leap year.\n", year);
-        return 1;
+        leap=1;
     }
     // all other years are not leap years
     else
     {
         printf("%d is not a leap year.\n", year);
-        return 0;
+        leap=0;
     }
+    return leap;
 }
 
 
