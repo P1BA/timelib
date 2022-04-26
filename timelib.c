@@ -24,19 +24,21 @@ int day_of_the_year(int day, int month, int year)
 /*
 Die Funktion liest 3 Ganzzahlwerte (Integer) ein, für Tag, Monat und Jahr. Wenn das angegebene Datum
 ungültig ist, wird erneut eingelesen, solange bis ein gültiges Datum eingegeben wurde.
-
+*/
+/*
 int input_date(int day,int month,int year)
 {
-return = 0;
-*/
 
+return = 0;
+}
+*/
 /*
 Die Funktion überprüft, ob ein gegebenes Jahr nach den Regeln des gregorianischen Kalender ein Schaltjahr
 ist. Bei Jahreszahlen vor dem Jahr 1582 wird ein Fehler zurückgegeben.
 */
 int is_leapyear (int year )
 {
-    int leap=NULL;
+    int leap=0;
     if (year<1582)
     {
         return -1;
@@ -78,7 +80,7 @@ Wert des Monats muss zwischen 1 und 12 liegen. Schaltjahre werden berücksichtigt
 */
 int get_days_for_month (int month,int year)
 {
-    int days=NULL;
+    int days=0;
 
     if (is_leapyear(year)==1)
     {
