@@ -8,12 +8,15 @@ program:TagDesJahres
 
 int main()
 {
-    int day=31;
-    int month=3;
-    int year=2000;
+    int day=26;
+    int month=4;
+    int year=2022;
     int tmp=0;
 
     tmp = day_of_the_year(day,month,year);
-    printf("%d",tmp);
+    printf("%d\n",tmp);
+    tmp=-1;
+    day_of_the_week(year,month,day);
+
     return 0;
 }

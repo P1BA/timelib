@@ -32,7 +32,8 @@ ungültig ist, wird erneut eingelesen, solange bis ein gültiges Datum eingegeben 
 
 */
 //TODO
-void input_date(int day,int month,int year)
+/*
+int input_date(int day,int month,int year)
 {
     scanf("%d",day);
     scanf("%d",month);
@@ -143,4 +144,37 @@ int exists_date(int day,int month,int year)
         return 0;
     }
     return 1;
+}
+
+void day_of_the_week(int y,int m,int d)
+{
+
+    int tmp=-1;
+    tmp=(d+=m<3?y--:y-2,23*m/9+d+4+y/4-y/100+y/400)%7;
+
+
+    switch(tmp)
+    {
+    case 0:
+        printf("its a Sunday \n");
+        break;
+    case 1:
+        printf("its a Monday \n");
+        break;
+    case 2:
+        printf("its a Tuseday \n");
+        break;
+    case 3:
+        printf("its a Wednsday \n");
+        break;
+    case 4:
+        printf("its a Thursday \n");
+        break;
+    case 5:
+        printf("its a Friday \n");
+        break;
+    case 6:
+        printf("its a Saturday \n");
+        break;
+    }
 }
