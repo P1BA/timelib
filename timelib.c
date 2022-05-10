@@ -1,3 +1,9 @@
+/*
+name:Philipp Tiemann
+date:15.03.2021
+program:TagDesJahres
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "timelib.h"
@@ -97,8 +103,6 @@ Wert des Monats muss zwischen 1 und 12 liegen. Schaltjahre werden berücksichtigt
 @param int month
 @param int year
 @return int added days of the month ; -1 error
-
-
 */
 int get_days_for_month (int month,int year)
 {
@@ -148,7 +152,13 @@ int exists_date(int day,int month,int year)
     }
     return 1;
 }
-
+/*
+Die Funktion ermittelt den Wochentag und gibt diesen zurück
+@param int day
+@param int month
+@param int year
+@return sunday-saturday or - 1 in case of an error
+*/
 void day_of_the_week(int y,int m,int d)
 {
 
@@ -179,5 +189,8 @@ void day_of_the_week(int y,int m,int d)
     case 6:
         printf("its a Saturday \n");
         break;
+    default:
+        printf("something went wrong \n");
+        exit(-1);
     }
 }
