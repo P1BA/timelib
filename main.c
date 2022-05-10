@@ -5,18 +5,20 @@ program:TagDesJahres
 */
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "timelib.h"
 int main()
 {
-    int day=26;
-    int month=4;
-    int year=2022;
+
+    struct date date=input_date();
+    //int day=26;
+    //int month=4;
+    //int year=2022;
     int tmp=0;
 
-    tmp = day_of_the_year(day,month,year);
+    tmp = day_of_the_year(date.day,date.month,date.year);
     printf("%d\n",tmp);
     tmp=-1;
-    day_of_the_week(year,month,day);
+    day_of_the_week(date.year,date.month,date.day);
 
     return 0;
 }

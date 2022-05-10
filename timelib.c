@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include"timelib.h"
+#include "timelib.h"
 
 
 /*
@@ -32,15 +32,18 @@ ungültig ist, wird erneut eingelesen, solange bis ein gültiges Datum eingegeben 
 
 */
 //TODO
-/*
-int input_date(int day,int month,int year)
+
+struct date input_date()
 {
-    scanf("%d",day);
-    scanf("%d",month);
-    scanf("%d",year);
-    int *d=&day;
-    int *m=&month;
-    int *y=&year;
+    struct date date;
+    printf("please insert a day \n");
+    scanf("%d",&date.day);
+    printf("please insert a month \n");
+    scanf("%d",&date.month);
+    printf("please insert a year \n");
+    scanf("%d",&date.year);
+
+    return date;
 
 }
 
